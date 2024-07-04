@@ -2,3 +2,4 @@ servers.json
 admins.json
 .env
 alertd
+alertd.exe
