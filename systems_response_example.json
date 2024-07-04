@@ -1,0 +1,249 @@
+{
+	"@odata.context": "/redfish/v1/$metadata#Systems/Members/$entity",
+	"@odata.id": "/redfish/v1/Systems/1/",
+	"@odata.type": "#ComputerSystem.1.0.1.ComputerSystem",
+	"Actions": {
+		"#ComputerSystem.Reset": {
+			"ResetType@Redfish.AllowableValues": [
+				"On",
+				"ForceOff",
+				"ForceRestart",
+				"Nmi",
+				"PushPowerButton"
+			],
+			"target": "/redfish/v1/Systems/1/Actions/ComputerSystem.Reset/"
+		}
+	},
+	"AssetTag": "",
+	"AvailableActions": [
+		{
+			"Action": "Reset",
+			"Capabilities": [
+				{
+					"AllowableValues": [
+						"On",
+						"ForceOff",
+						"ForceRestart",
+						"Nmi",
+						"PushPowerButton"
+					],
+					"PropertyName": "ResetType"
+				}
+			]
+		}
+	],
+	"Bios": { "Current": { "VersionString": "P89 v2.90 (04/29/2021)" } },
+	"BiosVersion": "P89 v2.90 (04/29/2021)",
+	"Boot": {
+		"BootSourceOverrideEnabled": "Disabled",
+		"BootSourceOverrideSupported": [
+			"None",
+			"Cd",
+			"Hdd",
+			"Usb",
+			"Utilities",
+			"Diags",
+			"BiosSetup",
+			"Pxe",
+			"UefiShell",
+			"UefiTarget"
+		],
+		"BootSourceOverrideTarget": "None",
+		"UefiTargetBootSourceOverride": "None",
+		"UefiTargetBootSourceOverrideSupported": [
+			"HD.Emb.1.11",
+			"Unknown.Unknown.200.2",
+			"Generic.USB.1.1",
+			"NIC.LOM.1.1.IPv4",
+			"NIC.LOM.1.1.IPv6",
+			"HD.Emb.1.10"
+		]
+	},
+	"Description": "Computer System View",
+	"EthernetInterfaces": {
+		"@odata.id": "/redfish/v1/Systems/1/EthernetInterfaces/"
+	},
+	"HostCorrelation": {
+		"HostMACAddress": [
+			"3c:a8:2a:20:87:2c",
+			"3c:a8:2a:20:87:2d",
+			"3c:a8:2a:20:87:2e",
+			"3c:a8:2a:20:87:2f"
+		],
+		"HostName": "",
+		"IPAddress": ["", "", "", ""]
+	},
+	"HostName": "",
+	"Id": "1",
+	"IndicatorLED": "Off",
+	"LogServices": { "@odata.id": "/redfish/v1/Systems/1/LogServices/" },
+	"Manufacturer": "HPE",
+	"Memory": {
+		"Status": { "HealthRollUp": "OK" },
+		"TotalSystemMemoryGB": 256
+	},
+	"MemorySummary": {
+		"Status": { "HealthRollUp": "OK" },
+		"TotalSystemMemoryGiB": 256
+	},
+	"Model": "ProLiant DL380 Gen9",
+	"Name": "Computer System",
+	"Oem": {
+		"Hp": {
+			"@odata.type": "#HpComputerSystemExt.1.2.2.HpComputerSystemExt",
+			"Actions": {
+				"#HpComputerSystemExt.PowerButton": {
+					"PushType@Redfish.AllowableValues": [
+						"Press",
+						"PressAndHold"
+					],
+					"target": "/redfish/v1/Systems/1/Actions/Oem/Hp/ComputerSystemExt.PowerButton/"
+				},
+				"#HpComputerSystemExt.SystemReset": {
+					"ResetType@Redfish.AllowableValues": [
+						"ColdBoot",
+						"AuxCycle"
+					],
+					"target": "/redfish/v1/Systems/1/Actions/Oem/Hp/ComputerSystemExt.SystemReset/"
+				}
+			},
+			"AvailableActions": [
+				{
+					"Action": "PowerButton",
+					"Capabilities": [
+						{
+							"AllowableValues": ["Press", "PressAndHold"],
+							"PropertyName": "PushType"
+						},
+						{
+							"AllowableValues": ["/Oem/Hp"],
+							"PropertyName": "Target"
+						}
+					]
+				},
+				{
+					"Action": "ServerSigRecompute",
+					"Capabilities": [
+						{
+							"AllowableValues": ["/Oem/Hp"],
+							"PropertyName": "Target"
+						}
+					]
+				},
+				{
+					"Action": "SystemReset",
+					"Capabilities": [
+						{
+							"AllowableValues": ["ColdBoot", "AuxCycle"],
+							"PropertyName": "ResetType"
+						},
+						{
+							"AllowableValues": ["/Oem/Hp"],
+							"PropertyName": "Target"
+						}
+					]
+				}
+			],
+			"Battery": [
+				{
+					"Condition": "Ok",
+					"ErrorCode": 0,
+					"FirmwareVersion": "1.0",
+					"Index": 1,
+					"MaxCapWatts": 96,
+					"Model": "727258-B21",
+					"Present": "Yes",
+					"ProductName": "HP Smart Storage Batt 96",
+					"SerialNumber": "00000000000000",
+					"Spare": "750450-001"
+				}
+			],
+			"Bios": {
+				"Backup": {
+					"Date": "10/16/2020",
+					"Family": "P89",
+					"VersionString": "P89 v2.80 (10/16/2020)"
+				},
+				"Current": {
+					"Date": "04/29/2021",
+					"Family": "P89",
+					"VersionString": "P89 v2.90 (04/29/2021)"
+				},
+				"UefiClass": 2
+			},
+			"DeviceDiscoveryComplete": {
+				"AMSDeviceDiscovery": "NoAMS",
+				"DeviceDiscovery": "vMainDeviceDiscoveryComplete",
+				"SmartArrayDiscovery": "Complete"
+			},
+			"IntelligentProvisioningIndex": 3,
+			"IntelligentProvisioningLocation": "System Board",
+			"IntelligentProvisioningVersion": "2.71.134",
+			"PostState": "FinishedPost",
+			"PowerAllocationLimit": 1000,
+			"PowerAutoOn": "PowerOn",
+			"PowerOnDelay": "Minimum",
+			"PowerRegulatorMode": "Dynamic",
+			"PowerRegulatorModesSupported": [
+				"OSControl",
+				"Dynamic",
+				"Max",
+				"Min"
+			],
+			"TrustedModules": [{ "Status": "NotPresent" }],
+			"Type": "HpComputerSystemExt.1.2.2",
+			"VirtualProfile": "Inactive",
+			"links": {
+				"BIOS": { "href": "/redfish/v1/systems/1/bios/" },
+				"EthernetInterfaces": {
+					"href": "/redfish/v1/Systems/1/EthernetInterfaces/"
+				},
+				"FirmwareInventory": {
+					"href": "/redfish/v1/Systems/1/FirmwareInventory/"
+				},
+				"Memory": { "href": "/redfish/v1/Systems/1/Memory/" },
+				"NetworkAdapters": {
+					"href": "/redfish/v1/Systems/1/NetworkAdapters/"
+				},
+				"PCIDevices": { "href": "/redfish/v1/Systems/1/PCIDevices/" },
+				"PCISlots": { "href": "/redfish/v1/Systems/1/PCISlots/" },
+				"SUT": { "href": "/redfish/v1/systems/1/hpsut/" },
+				"SecureBoot": { "href": "/redfish/v1/Systems/1/SecureBoot/" },
+				"SmartStorage": {
+					"href": "/redfish/v1/Systems/1/SmartStorage/"
+				},
+				"SoftwareInventory": {
+					"href": "/redfish/v1/Systems/1/SoftwareInventory/"
+				}
+			}
+		}
+	},
+	"Power": "On",
+	"PowerState": "On",
+	"ProcessorSummary": {
+		"Count": 2,
+		"Model": "Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz",
+		"Status": { "HealthRollUp": "OK" }
+	},
+	"Processors": {
+		"Count": 2,
+		"ProcessorFamily": "Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz",
+		"Status": { "HealthRollUp": "OK" }
+	},
+	"SKU": "000000-000",
+	"SerialNumber": "0000000000",
+	"Status": { "Health": "OK", "State": "Enabled" },
+	"SystemType": "Physical",
+	"Type": "ComputerSystem.1.0.1",
+	"UUID": "00000000-0000-0000-0000-000000000000",
+	"links": {
+		"Chassis": [{ "href": "/redfish/v1/Chassis/1/" }],
+		"EthernetInterfaces": {
+			"href": "/redfish/v1/Systems/1/EthernetInterfaces/"
+		},
+		"Logs": { "href": "/redfish/v1/Systems/1/LogServices/" },
+		"ManagedBy": [{ "href": "/redfish/v1/Managers/1/" }],
+		"Processors": { "href": "/redfish/v1/Systems/1/Processors/" },
+		"self": { "href": "/redfish/v1/Systems/1/" }
+	}
+}
